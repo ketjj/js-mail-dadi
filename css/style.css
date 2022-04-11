@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(1, 20, 77);
+  color:white;
+}
+
+.debug {
+  background-color: rgb(17, 81, 60);
+}
+
+.k_container{
+  height: 100vh;
+  background-color: blueviolet;
+}

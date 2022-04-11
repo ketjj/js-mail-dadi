@@ -25,10 +25,38 @@ for (let i = 0; i < utentiAutorizzati.length; i++){
     emailComferm = true;
     document.getElementById('mail-output').innerHTML = "Welcome back!";
   } else {
-    document.getElementById("mail-output").innerHTML = "Sorry";
+    document.getElementById("mail-output").innerHTML = "Sorry, your mail isn't registrated";
   }
 }
 
 
 
+// Gioco dei dadi
 
+
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+
+
+const gameResult = document.getElementById('resultt');
+limit = 6;
+let numberPlayer = Math.floor(Math.random() * limit);
+let computerPlayer = Math.floor(Math.random() * limit);
+
+document.getElementById('number-player').innerHTML(numberPlayer);
+
+document.getElementById('number-computer').innerHTML(computerPlayer);
+
+// Creare il button per il risultato
+
+gameResult.addEventListener('click', function(){
+  if(numberPlayer > computerPlayer) {
+    document.getElementById('resultt').innerHTML = "Player1 won!";
+  }else if (numberPlayer === computerPlayer){
+    document.getElementById('resultt').innerHTML = "Peer!";
+  }else {
+    document.getElementById('resultt').innerHTML = "Computer won!";
+  }
+});
+
+
+//NON SONO RIUSCITA AD ANDARE AVANTI, MI SPIACE
