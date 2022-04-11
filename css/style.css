@@ -1,6 +1,7 @@
 body {
   background-color: rgb(1, 20, 77);
   color:white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .debug {
@@ -10,4 +11,19 @@ body {
 .k_container{
   height: 100vh;
   background-color: blueviolet;
+}
+#mail-output {
+  margin-bottom: 40px;
+}
+
+.player-titles span{
+  margin: 20px 40px;
+}
+ 
+#spacex {
+  margin: 0 85px;
+}
+
+#resultt{
+  margin: 0 120px;
 }

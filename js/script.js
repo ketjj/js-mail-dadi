@@ -42,19 +42,19 @@ limit = 6;
 let numberPlayer = Math.floor(Math.random() * limit);
 let computerPlayer = Math.floor(Math.random() * limit);
 
-document.getElementById('number-player').innerHTML(numberPlayer);
+document.getElementById("number-player").append(numberPlayer);
 
-document.getElementById('number-computer').innerHTML(computerPlayer);
+document.getElementById("number-computer").append(computerPlayer);
 
 // Creare il button per il risultato
 
 gameResult.addEventListener('click', function(){
   if(numberPlayer > computerPlayer) {
-    document.getElementById('resultt').innerHTML = "Player1 won!";
+    document.getElementById("resultt").innerHTML = "Player1 won!";
   }else if (numberPlayer === computerPlayer){
-    document.getElementById('resultt').innerHTML = "Peer!";
+    document.getElementById("resultt").innerHTML = "Peer!";
   }else {
-    document.getElementById('resultt').innerHTML = "Computer won!";
+    document.getElementById("resultt").innerHTML = "Computer won!";
   }
 });
 
