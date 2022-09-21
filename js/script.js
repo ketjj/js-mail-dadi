@@ -1,62 +1,40 @@
 
+const users = ['example@gmail.com', 'example2@gmail.com', 'example3@gmail.com', 'example4@gmail.com', 'example5@gmail.com'];
 
-// console.log('Hi');
+// const userMail = prompt('Inserisci la mail');
+// console.log(userMail);
 
-// Mail
-// Chiedi all’utente la sua email,
+let msg = document.getElementById("mail-output");
 
-const insertMail = prompt('Inserisci la mail')
-console.log(insertMail);
+// if(users.includes(userMail)){
+//   msg.textContent = 'Ciao, sei autorizzato 🕵️‍♀️'
+// } else{
+//   msg.textContent = 'Ciao, sei il nuovo qui 🎉'
+// }
 
 
-const utentiAutorizzati = ["example@gmail.com", "example1@gmail.com","example2@gmail.com", "example3@gmail.com", "example4@gmail.com", "example5@gmail.com", "example6@gmail.com",
-"example7@gmail.com"];
+let playerNum = Math.trunc((Math.random() * 6) + 1);
 
-console.log(utentiAutorizzati);
+let comptNum = Math.trunc((Math.random() * 6) + 1);
 
-// controlla che sia nella lista di chi può accedere (creare quindi una lista di utenti autorizzati).
 
-let emailComferm = true;
-
-for (let i = 0; i < utentiAutorizzati.length; i++){
-  // stampa un messaggio appropriato sull’esito del controllo.
-
-  if (utentiAutorizzati[i] === insertMail){
-    emailComferm = true;
-    document.getElementById('mail-output').innerHTML = "Welcome back!";
-  } else {
-    document.getElementById("mail-output").innerHTML = "Sorry, your mail isn't registrated";
+document.getElementById('play').addEventListener('click', function(){
+  document.getElementById('number-player').innerHTML = playerNum;
+  document.getElementById('number-computer').innerHTML = comptNum;
+  
+  const outPut = document.querySelector('.output');
+  if(playerNum > comptNum){
+    outPut.innerHTML = 'Ha vinto il Player! 🎉🎉🎉'
+  } else if(playerNum === comptNum){
+    outPut.innerHTML = 'Pareggio! 🙌'
+  } else{
+    outPut.innerHTML = 'Ha vinto il Computer!💻 🤳'
   }
-}
+  
+  playerNum = Math.trunc((Math.random() * 6) + 1);
 
+  comptNum = Math.trunc((Math.random() * 6) + 1);
+  console.log(playerNum);
+  console.log(comptNum);
 
-
-// Gioco dei dadi
-
-
-// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-
-
-const gameResult = document.getElementById('resultt');
-limit = 6;
-let numberPlayer = Math.floor(Math.random() * limit);
-let computerPlayer = Math.floor(Math.random() * limit);
-
-document.getElementById("number-player").append(numberPlayer);
-
-document.getElementById("number-computer").append(computerPlayer);
-
-// Creare il button per il risultato
-
-gameResult.addEventListener('click', function(){
-  if(numberPlayer > computerPlayer) {
-    document.getElementById("resultt").innerHTML = "Player1 won!";
-  }else if (numberPlayer === computerPlayer){
-    document.getElementById("resultt").innerHTML = "Peer!";
-  }else {
-    document.getElementById("resultt").innerHTML = "Computer won!";
-  }
-});
-
-
-//NON SONO RIUSCITA AD ANDARE AVANTI, MI SPIACE
+})

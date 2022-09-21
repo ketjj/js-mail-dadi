@@ -21,19 +21,29 @@
 <body>
   <div class="container">
     <div class="k_box text-center my-5">
-      <div id="mail-output" class="mail-box"></div>
+      <h4 id="mail-output" class="mail-box"></h4>
 
-      <div class="player-titles d-flex justify-content-center ">
-        <span>Player1</span>
-        <span id="spacex"></span>
-        <span>Computer</span>
+      <div class="player-titles d-flex justify-content-around ">
+        <div class="text-center">
+          <h2 id="number-player"></h2>
+          <h4>Player1</h4>
+        </div>
+
+        <div class="text-center">
+          <h2 id="number-computer"></h2>
+          <h4>Computer</h4>
+        </div>
       </div>
 
       <div class="dice-game d-flex justify-content-center">
-        <span id="number-player"></span>
-        <button id="resultt" class="btn btn-danger">Let's play</button>
-        <span id="number-computer"></span>
+        
+
+        <button id="play" class="btn btn-danger">Let's play</button>
+
+      
       </div>
+
+      <div class="output mt-4"></div>
 
     </div>
   </div>
